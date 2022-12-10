@@ -102,12 +102,36 @@ class _ExploreState extends State<Home> {
                   Container(
                     child: Row(
                       children: [
-                        Text("Main Account Transaction"),
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/sta.png',
+                              width: 100,
+                              height: 100,
+                            ),
+                            Text("Main Account Transactions"),
+                          ],
+                        ),
+                        // Row(
+                        //   children: [
+                        //     Image.asset(
+                        //       'assets/sta.png',
+                        //       width: 100,
+                        //       height: 100,
+                        //     ),
+                        //     Text("Main Account Transactions"),
+                        //   ],
+                        // ),
                       ],
                     ),
                   )
                 ],
               ),
+              Column(
+                children: [
+                  Text("Favorite Links"),
+                ],
+              )
             ],
           )),
         ),
