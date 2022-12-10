@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -90,10 +91,10 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: [
-          // BottomNavigationBarItem(
-          //   icon: SvgPicture.asset('assets/Home.svg'),
-          //   label: 'Home',
-          // ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset('assets/Home.svg'),
+            label: 'Home',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
             label: 'Business',
@@ -102,11 +103,11 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.school),
             label: 'School',
           ),
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.school),
             label: 'School',
           ),
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.school),
             label: 'School',
           ),
