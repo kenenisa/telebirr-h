@@ -18,5 +18,8 @@ void onItemTapped(int index, BuildContext context) {
   } else if (index == 4) {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => const Menu()));
+  } else if (index == 0) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const Home()));
   }
 }

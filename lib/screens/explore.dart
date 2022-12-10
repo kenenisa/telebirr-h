@@ -45,21 +45,101 @@ class _ExploreState extends State<Explore> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         elevation: 15,
-        // currentIndex: _selectedIndex,
+        currentIndex: 2,
         selectedItemColor: Colors.amber[800],
         showSelectedLabels: true,
         onTap: (i) => onItemTapped(i, context),
         items: [
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/Home.svg'), label: ''),
+              icon: SvgPicture.asset('assets/Home.svg'),
+              label: '',
+              activeIcon: Container(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SvgPicture.asset('assets/Home.svg', color: Colors.amber),
+                  Container(
+                    width: 5,
+                    height: 5,
+                    margin: EdgeInsets.only(top: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                  )
+                ],
+              ))),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/GIft.svg'), label: ''),
+              icon: SvgPicture.asset('assets/GIft.svg'),
+              label: '',
+              activeIcon: Container(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SvgPicture.asset('assets/GIft.svg', color: Colors.amber),
+                  Container(
+                    width: 5,
+                    height: 5,
+                    margin: EdgeInsets.only(top: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                  )
+                ],
+              ))),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/Compass.svg'), label: ''),
+              icon: SvgPicture.asset('assets/Compass.svg'),
+              label: '',
+              activeIcon: Container(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SvgPicture.asset('assets/Compass.svg', color: Colors.amber),
+                  Container(
+                    width: 5,
+                    height: 5,
+                    margin: EdgeInsets.only(top: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                  )
+                ],
+              ))),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/User_alt.svg'), label: ''),
+              icon: SvgPicture.asset('assets/User_alt.svg'),
+              label: '',
+              activeIcon: Container(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SvgPicture.asset('assets/User_alt.svg', color: Colors.amber),
+                  Container(
+                    width: 5,
+                    height: 5,
+                    margin: EdgeInsets.only(top: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                  )
+                ],
+              ))),
           BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/Menu.svg'), label: ''),
+              icon: SvgPicture.asset('assets/Menu.svg'),
+              label: '',
+              activeIcon: Container(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SvgPicture.asset('assets/Menu.svg', color: Colors.amber),
+                  Container(
+                    width: 5,
+                    height: 5,
+                    margin: EdgeInsets.only(top: 5),
+                    decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                  )
+                ],
+              ))),
         ],
       ),
     );
