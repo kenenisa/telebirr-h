@@ -90,15 +90,23 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
+          // BottomNavigationBarItem(
+          //   icon: SvgPicture.asset('assets/Home.svg'),
+          //   label: 'Home',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
             label: 'Business',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
+           BottomNavigationBarItem(
             icon: Icon(Icons.school),
             label: 'School',
           ),
