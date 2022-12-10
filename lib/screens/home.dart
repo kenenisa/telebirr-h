@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:telebirr/screens/components/explore_box.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -60,13 +62,13 @@ class _ExploreState extends State<Home> {
                     ),
                   ),
                   Column(
-                    children: [
+                    children: const [
                       Text("Hello"),
                       SizedBox(height: 5),
                       Text("👋"),
                       SizedBox(height: 10),
                       Text(
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 14.0,
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -85,10 +87,10 @@ class _ExploreState extends State<Home> {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
+                  children: const [
                     Text("Rewards"),
                     Text(
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 14.0,
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
@@ -99,37 +101,80 @@ class _ExploreState extends State<Home> {
               ),
               Row(
                 children: [
-                  Container(
-                    child: Row(
-                      children: [
-                        Row(
-                          children: [
-                            Image.asset(
-                              'assets/sta.png',
-                              width: 100,
-                              height: 100,
-                            ),
-                            Text("Main Account Transactions"),
-                          ],
-                        ),
-                        // Row(
-                        //   children: [
-                        //     Image.asset(
-                        //       'assets/sta.png',
-                        //       width: 100,
-                        //       height: 100,
-                        //     ),
-                        //     Text("Main Account Transactions"),
-                        //   ],
-                        // ),
-                      ],
-                    ),
+                  Expanded(
+                    child: Scrollbar(
+                        thickness: 0,
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/sta.png',
+                                    width: 100,
+                                    height: 100,
+                                  ),
+                                  Text("Main Account Transactions"),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/sta.png',
+                                    width: 100,
+                                    height: 100,
+                                  ),
+                                  Text("Main Account Transactions"),
+                                ],
+                              ),
+                            ],
+                          ),
+                        )),
                   )
                 ],
               ),
               Column(
                 children: [
-                  Text("Favorite Links"),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                            style: TextStyle(
+                              fontSize: 17.0,
+                              color: Colors.black,
+                            ),
+                            "Favorite Links"),
+                        Text("See all"),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Image.asset(
+                        'assets/Menu1.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      Text("Deposit Cash"),
+                      SizedBox(width: 138),
+                      Icon(Icons.arrow_forward_ios)
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Image.asset(
+                        'assets/Financial Institution.png',
+                        width: 100,
+                        height: 100,
+                      ),
+                      Text("Financial Institutions"),
+                      SizedBox(width: 90),
+                      Icon(Icons.arrow_forward_ios)
+                    ],
+                  ),
                 ],
               )
             ],
