@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:telebirr/screens/explore.dart';
 import 'package:telebirr/screens/home.dart';
 import 'package:telebirr/screens/splash.dart';
+import 'package:telebirr/util.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,16 +60,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
-  void _onItemTapped(int index, BuildContext context) {
-    if (index == 2) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const Explore()));
-    }
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -77,36 +68,6 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(child: Home()),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        elevation: 15,
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        showSelectedLabels: true,
-        onTap: (i) => _onItemTapped(i, context),
-        items: [
-          BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/Home.svg'), label: ''),
-          BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/GIft.svg'), label: ''),
-          BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/Compass.svg'), label: ''),
-          BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/User_alt.svg'), label: ''),
-          BottomNavigationBarItem(
-              icon: SvgPicture.asset('assets/Menu.svg'), label: ''),
-        ],
-      ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+    return Home();
   }
 }
