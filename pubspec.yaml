@@ -67,6 +67,9 @@ flutter:
     - assets/Menu.svg
     - assets/User_alt.svg
     - assets/explore1.png
+    - assets/explore2.png
+    - assets/explore3.png
+    - assets/explore4.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
