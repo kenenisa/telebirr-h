@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -75,10 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            Text('$_selectedIndex')
           ],
         ),
       ),
@@ -87,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 15,
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
+        showSelectedLabels: true,
         onTap: _onItemTapped,
         items: [
           BottomNavigationBarItem(
