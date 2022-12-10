@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:telebirr/screens/explore.dart';
 import 'package:telebirr/screens/home.dart';
+import 'package:telebirr/screens/menu.dart';
 import 'package:telebirr/screens/myaccount.dart';
 import 'package:telebirr/screens/rewards.dart';
 
@@ -14,5 +15,8 @@ void onItemTapped(int index, BuildContext context) {
   } else if (index == 1) {
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => const Rewards()));
+  } else if (index == 4) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const Menu()));
   }
 }

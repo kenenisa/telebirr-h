@@ -72,6 +72,7 @@ flutter:
     - assets/explore4.png
     - assets/account1.png
     - assets/reward.png
+    - assets/menu.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
