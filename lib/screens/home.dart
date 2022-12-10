@@ -15,6 +15,7 @@ class _ExploreState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        margin: EdgeInsets.only(top: 50),
         child: SingleChildScrollView(
           child: Container(
               child: Column(
