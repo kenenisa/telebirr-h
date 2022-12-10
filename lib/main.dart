@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:telebirr/screens/explore.dart';
 import 'package:telebirr/screens/home.dart';
+import 'package:telebirr/screens/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,7 +59,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
-  void _onItemTapped(int index) {
+  void _onItemTapped(int index, BuildContext context) {
+    if (index == 2) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const Explore()));
+    }
     setState(() {
       _selectedIndex = index;
     });
@@ -83,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         showSelectedLabels: true,
-        onTap: _onItemTapped,
+        onTap: (i) => _onItemTapped(i, context),
         items: [
           BottomNavigationBarItem(
               icon: SvgPicture.asset('assets/Home.svg'), label: ''),
