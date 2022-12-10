@@ -65,6 +65,7 @@ flutter:
     - assets/Compass.svg
     - assets/GIft.svg
     - assets/Menu.svg
+    - assets/Balance.svg
     - assets/User_alt.svg
     - assets/explore1.png
     - assets/explore2.png
@@ -73,6 +74,7 @@ flutter:
     - assets/account1.png
     - assets/reward.png
     - assets/menu.png
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

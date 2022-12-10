@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ExploreBox extends StatelessWidget {
-  const ExploreBox({super.key, this.title, this.subtitle,this.image});
+  const ExploreBox({super.key, this.title, this.subtitle, this.image});
   final title;
   final subtitle;
   final image;

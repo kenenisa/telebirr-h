@@ -17,7 +17,99 @@ class _ExploreState extends State<Home> {
       appBar: AppBar(title: Text('Home')),
       body: Container(
         child: SingleChildScrollView(
-          child: Container(child: Text('home page')),
+          child: Container(
+              child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 10, 0),
+                    child: Image.asset(
+                      'assets/Bell.png',
+                      width: 40,
+                      height: 40,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 10, 0),
+                    child: Image.asset(
+                      'assets/Search.png',
+                      width: 40,
+                      height: 40,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 10, 0),
+                    child: Image.asset(
+                      'assets/qr.png',
+                      width: 40,
+                      height: 40,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 10, 0),
+                    child: Image.asset(
+                      'assets/woman.png',
+                      width: 100,
+                      height: 150,
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      Text("Hello"),
+                      SizedBox(height: 5),
+                      Text("👋"),
+                      SizedBox(height: 10),
+                      Text(
+                          style: const TextStyle(
+                            fontSize: 14.0,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          'Hiwot Bogale'),
+                    ],
+                  )
+                ],
+              ),
+              Image.asset(
+                'assets/Balance.png',
+                width: 400,
+                height: 100,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text("Rewards"),
+                    Text(
+                        style: const TextStyle(
+                          fontSize: 14.0,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        "Balance"),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  Container(
+                    child: Row(
+                      children: [
+                        Text("Main Account Transaction"),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ],
+          )),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
