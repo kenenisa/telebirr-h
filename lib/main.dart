@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:telebirr/screens/explore.dart';
+import 'package:telebirr/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,6 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(
           headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
           headline2: TextStyle(
-            
               fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white),
           subtitle1: TextStyle(fontSize: 16.0, color: Colors.white),
           bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(child: Explore()),
+      body: Center(child: Home()),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         elevation: 15,
