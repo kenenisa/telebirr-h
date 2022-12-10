@@ -7,7 +7,14 @@ class ExploreBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Stack(children: [Image.asset('assets/explore1.png')]),
+      decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(5))),
+      child: Stack(children: [
+        Image.asset('assets/explore1.png'),
+        Container(
+          child: Column(children: [Text(title), Text(subtitle)]),
+        )
+      ]),
     );
   }
 }
