@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:telebirr/screens/home.dart';
 
 class Splash extends StatelessWidget {
   const Splash({super.key});
@@ -42,7 +43,12 @@ class Splash extends StatelessWidget {
                             width: 250,
                             height: 50,
                             child: ElevatedButton(
-                              onPressed: () => {},
+                              onPressed: () => {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const Home()))
+                              },
                               child: Text('SignUp'),
                             ),
                           ),
@@ -54,7 +60,12 @@ class Splash extends StatelessWidget {
                             width: 250,
                             height: 50,
                             child: ElevatedButton(
-                              onPressed: () => {},
+                              onPressed: () => {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const Home()))
+                              },
                               child: Text('SignIn'),
                             ),
                           )
